@@ -19,6 +19,9 @@ urlpatterns = [
     path('list_my_reviews/', views.list_my_reviews, name='list_my_reviews'),
 
     path('create_booking/<vehicle_id>', views.create_booking, name='create_booking'),
+    path('list_owner_booking/', views.list_owner_booking, name='list_owner_booking'),
+    path('list_rentee_booking/', views.list_rentee_booking, name='list_rentee_booking'),
+    path('approve_booking/<booking_id>', views.approve_booking, name='approve_booking'),
 
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from .serializers import *
 from .models import *
+from django.db.models import Q
 from rest_framework import status
 from rest_framework.request import Request
 from django.contrib.auth.models import User
@@ -179,29 +180,40 @@ def add_review(request : Request, user_id):
     if request.user.is_authenticated:
         author_user = User.objects.get(id=request.user.id)
         author_user_credential = UserCredential.objects.get(user=author_user)
+        try:
+          about_user = User.objects.get(id=user_id)
+          about_user_credential = UserCredential.objects.get(user=about_user)
 
-        about_user = User.objects.get(id=user_id)
-        about_user_credential = UserCredential.objects.get(user=about_user)
+          check_booking_request_one = Booking.objects.filter(Q(owner=author_user_credential) & Q(rentee=about_user_credential))
+          check_booking_request_two = Booking.objects.filter(Q(owner=about_user_credential)& Q(rentee=author_user_credential))
+          print(check_booking_request_one)
 
-        if about_user_credential != author_user_credential:
-          new_review_Serializer = ReviwesSerializer(instance=Reviwes(auther=author_user_credential, about=about_user_credential) , data=request.data)
 
-          if new_review_Serializer.is_valid():
-             update_user_rating_Avg(request.data['rating'],about_user)
+          if about_user_credential != author_user_credential:
+              if ((check_booking_request_one) or (check_booking_request_two)):
+                  new_review_Serializer = ReviwesSerializer(instance=Reviwes(auther=author_user_credential, about=about_user_credential) , data=request.data)
 
-             new_review_Serializer.save()
-             dataResponse = {
-                "msg": "Your review posted Successfully",
-                 "about": f'{about_user_credential}',
-                "review": new_review_Serializer.data
-              }
-             return Response(dataResponse)
+                  if new_review_Serializer.is_valid():
+                    update_user_rating_Avg(request.data['rating'],about_user)
+
+                    new_review_Serializer.save()
+                    dataResponse = {
+                      "msg": "Your review posted Successfully",
+                      "about": f'{about_user_credential}',
+                      "review": new_review_Serializer.data
+                      }
+                    return Response(dataResponse)
+                  else:
+                    print(new_review_Serializer.errors)
+                    dataResponse = {"msg": "couldn't post a review"}
+                    return Response(dataResponse, status=status.HTTP_400_BAD_REQUEST)
+              else:
+                 return Response({"msg": f"Their is no booking request between you and the user {about_user.username}"})
           else:
-            print(new_review_Serializer.errors)
-            dataResponse = {"msg": "couldn't post a review"}
-            return Response(dataResponse, status=status.HTTP_400_BAD_REQUEST)
-        else:
-          return Response({"msg": "You can not post a review about your self"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"msg": "You can not post a review about your self"}, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+         return Response({"msg": f"{e}"})
     else:
       return Response({"msg": "Login first then post a review"}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -218,6 +230,7 @@ def edit_review(request : Request, review_id):
       user = User.objects.get(id=request.user.id)
       user_credential = UserCredential.objects.get(user=user)
       print(user_credential)
+
       try:
         review = Reviwes.objects.get(auther=user_credential, id=review_id)
         print(review)
@@ -307,10 +320,12 @@ def create_booking(request : Request, vehicle_id):
       rentee_user_credential = UserCredential.objects.get(user=rentee_user)
 
       vehicle = Vehicle.objects.get(id=vehicle_id)
+      owner_user_credential= vehicle.owner
+      print(owner_user_credential)
 
       #cost
       total_cost = calc_total_cost(vehicle, request.data['vehicle_delivery'], request.data['start_date'],request.data['end_date'])
-      new_booking_serializer = BookingSerializer(instance=Booking(rentee=rentee_user_credential, vehicle=vehicle, cost=total_cost), data=request.data)
+      new_booking_serializer = BookingSerializer(instance=Booking(owner=owner_user_credential,rentee=rentee_user_credential, vehicle=vehicle, cost=total_cost), data=request.data)
 
       if new_booking_serializer.is_valid():
               new_booking_serializer.save()
@@ -331,26 +346,15 @@ def list_owner_booking(request : Request):
     :return: dataResponse
     '''
     if request.user.is_authenticated:
-     user = User.objects.get(id=1)
-     user_credential = UserCredential.objects.get(user=user)
+        user = User.objects.get(id=request.user.id)
+        user_credential = UserCredential.objects.get(user=user)
 
-     #get the owner from their vehicle, Note: not an efficient way to do so but it will do for now
-     owner_vehicles = Vehicle.objects.filter(owner=user_credential)
-     print(owner_vehicles)
-     bookings = Booking.objects.all()
-
-     list_of_received_req =[]
-     for item in owner_vehicles:
-         if item in bookings:
-             list_of_received_req.append(item)
-     print(list_of_received_req)
-
-
-     dataResponse = {
-        "msg" : f"List of all {user.first_name} {user.last_name} booked vehicles",
-        "bookings" : f"{list_of_received_req}"
-     }
-     return Response(dataResponse)
+        rentee_booking = Booking.objects.filter(owner=user_credential)
+        dataResponse = {
+            "msg": f"List of all {user.first_name} {user.last_name} booking request",
+            "bookings": BookingSerializer(instance=rentee_booking, many=True).data
+        }
+        return Response(dataResponse)
     else:
         dataResponse = {"msg": "couldn't get this user bookings"}
         return Response(dataResponse, status=status.HTTP_401_UNAUTHORIZED)
@@ -394,11 +398,38 @@ def list_owner_old_booking():
 def delete_booking():
     pass
 
-@api_view(['PATCH'])
+@api_view(['GET'])
 @authentication_classes([JWTAuthentication])
-def approve_booking():
-    pass
+def approve_booking(request : Request, booking_id):
+ '''
+ this method for approving bookings, and it is only allowed to do so
+ if the user is: the owner of the vehicle and logged in.
+ :param: request, a positive integers
+ :return: dataResponse
+ '''
+ if request.user.is_authenticated:
+    user = User.objects.get(id=request.user.id)
+    user_credential = UserCredential.objects.get(user=user)
+    print(user_credential)
 
+    try:
+        booking_before_update = Booking.objects.filter(owner=user_credential, id=booking_id).update(approve=True)
+        booking_after_update = Booking.objects.get(owner=user_credential, id=booking_id)
+
+        dataResponse = {
+            "msg": "Your booking is approved",
+            "booking_approval_status": f"{booking_after_update.approve}",
+            "rentee": f"{booking_after_update.rentee}"}
+        return Response(dataResponse, status=status.HTTP_200_OK)
+
+    except Exception as e:
+        return Response({"msg": f"{e}"}, status=status.HTTP_401_UNAUTHORIZED)
+
+ else:
+      return Response({"msg": "Login first then approve the booking"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+#Helping functions
 def update_user_rating_Avg(rating: str, user)->None:
     '''
     this function is being called in add_review method view after saving the new posted review.

@@ -48,6 +48,7 @@ class Booking(models.Model):
     this model contains the booking info
     '''
     vehicle = models.ForeignKey(Vehicle, related_name= 'Vehicle_Booking',on_delete=models.CASCADE)
+    owner = models.ForeignKey(users_app_models.UserCredential, related_name= 'owner_Booking',on_delete=models.CASCADE)
     rentee = models.ForeignKey(users_app_models.UserCredential, related_name= 'rentee_Booking',on_delete=models.CASCADE)
     start_date = models.DateTimeField(auto_now_add=True, help_text='Vehicle received date')
     end_date = models.DateTimeField(null=False, help_text= 'Vehicle return date, at least 5 hours after vehicle received date')
