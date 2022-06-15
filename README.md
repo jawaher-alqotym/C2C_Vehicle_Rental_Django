@@ -1,14 +1,14 @@
 # C2C_Vehicle_Rental_Django
 
-[Idea](https://github.com/jawaher-alqotym/C2C_Car_Rental_Django/blob/main/README.md#idea "Idea")
+[Idea](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#idea "Idea")
 
-[Inspiration](https://github.com/jawaher-alqotym/C2C_Car_Rental_Django/blob/main/README.md#inspiration "Inspiration")
+[Inspiration](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#inspiration "Inspiration")
 
-[Impact&Challenges](https://github.com/jawaher-alqotym/C2C_Car_Rental_Django/blob/main/README.md#project-impact-and-challenges "Impact&Challenges")
+[Impact&Challenges](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#project-impact-and-challenges "Impact&Challenges")
 
-[Services&Features](https://github.com/jawaher-alqotym/C2C_Car_Rental_Django/blob/main/README.md#list-of-services--features "Services&Features")
+[Services&Features](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#list-of-services--features "Services&Features")
 
-[User Stories](https://github.com/jawaher-alqotym/C2C_Car_Rental_Django/blob/main/README.md#user-stories "User Stories")
+[User Stories](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#user-stories "User Stories")
 ## Idea:
 A platform to facilitate renting cars for both vehicle owners and vehicle rentee. The system will help users find a vehicle to rent directly from the vehicle owner without a “middle-man” and allow anyone with a vehicle to further benefit from it and generate an additional income by putting it up for rent.
 
