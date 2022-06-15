@@ -51,5 +51,5 @@ The project helps reduce vehicle renting costs and gas costs for users(the perso
 - Read rent request.
 - Read, update, and delete users.
 
-## Project link:
+## Project link
 https://jawaher-c2c-vehicle-rental.herokuapp.com/ 
