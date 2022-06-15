@@ -1,0 +1,1970 @@
+{
+	"info": {
+		"_postman_id": "a4a75941-f8ea-4b51-ad05-d3a720301022",
+		"name": "C2C_vehicle_rental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21319416"
+	},
+	"item": [
+		{
+			"name": "users_app/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Hala_Alqotym\",\r\n    \"first_name\": \"Hala\",\r\n    \"last_name\": \"Alqotym\",\r\n    \"email\": \"Hala2022@gmail.com\",\r\n    \"password\": \"Qwe123456$$\",\r\n    \"user_credential\": {\r\n      \"phone_number\": \"+966500960746\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users_app/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users_app",
+						"register",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "sucsess_register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Hala_Alqotym\",\r\n    \"first_name\": \"Jawaher\",\r\n    \"last_name\": \"Alqotym\",\r\n    \"email\": \"jawaher2022@gmail.com\",\r\n    \"password\": \"Qwe123456$$\",\r\n    \"user_credential\": {\r\n      \"phone_number\": \"+966500960746\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users_app/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users_app",
+								"register",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 07:31:20 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"New user hase been created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "users_app/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"username\": \"Jawaher_Alqotym\",\r\n\"password\": \"Qwe123456$$\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/users_app/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users_app",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "test_case_1/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"username\": \"Admin\",\r\n\"password\": \"123456\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users_app/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users_app",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 11:49:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "279"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your token have been generated\",\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjEwOTUzLCJpYXQiOjE2NTUyMDczNTMsImp0aSI6IjhhYzY4MmQ3MGE5NzQ5NWFiODQyNWQ5NDhlZmY4MmYxIiwidXNlcl9pZCI6MX0.fXTkAK0Mb7oti0g5pQWNQ0oezFcZ8UhF3ADDgL5I30I\"\n}"
+				}
+			]
+		},
+		{
+			"name": "add_vehicle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM3MTA1LCJpYXQiOjE2NTUyMzM1MDUsImp0aSI6ImQxODIzOWNhNDM2NzQ3MWRiYTk3OGE0ZWZlNDJjYmViIiwidXNlcl9pZCI6MX0.ySz964paKecG8NKf5A2KrBNtDOwwNj79bUqt54S00zM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"vehicle_brand\":\"BMW\",\r\n\"category\": \"Car\",\r\n\"year_of_making\": \"2022-06-19T19:02:37.127521Z\",\r\n\"hourly_rental_price\": 40,\r\n\"location\": \"KSA, Riyadh\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_vehicle/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"add_vehicle",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_vehicle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA2MDk1LCJpYXQiOjE2NTUyMDI0OTUsImp0aSI6ImZkOGU4NDQyMDI5ZDQwYzRhZWUxZDBkYWNkOGE5YWVkIiwidXNlcl9pZCI6MX0.BDDjb0_xMpfTftEIoz182rtgbvoT0UQILtteHiAaI7k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"vehicle_brand\":\"x999\",\r\n\"category\": \"Car\",\r\n\"year_of_making\": \"2222-12-12\",\r\n\"hourly_rental_price\": 40,\r\n\"location\": \"xxx,xxx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"add_vehicle",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 10:46:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your vehicle added Successfully\",\n    \"vehicle\": {\n        \"vehicle_brand\": \"x999\",\n        \"category\": \"Car\",\n        \"hourly_rental_price\": 40,\n        \"location\": \"xxx,xxx\"\n    }\n}"
+				},
+				{
+					"name": "add_vehicle",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM3MTA1LCJpYXQiOjE2NTUyMzM1MDUsImp0aSI6ImQxODIzOWNhNDM2NzQ3MWRiYTk3OGE0ZWZlNDJjYmViIiwidXNlcl9pZCI6MX0.ySz964paKecG8NKf5A2KrBNtDOwwNj79bUqt54S00zM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"vehicle_brand\":\"BMW\",\r\n\"category\": \"Car\",\r\n\"year_of_making\": \"2022-06-19T19:02:37.127521Z\",\r\n\"hourly_rental_price\": 40,\r\n\"location\": \"KSA, Riyadh\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_vehicle/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"add_vehicle",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 19:36:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your vehicle added Successfully\",\n    \"owner\": \"Admin\",\n    \"vehicle\": {\n        \"vehicle_brand\": \"BMW\",\n        \"category\": \"Car\",\n        \"year_of_making\": \"2022-06-14T19:36:59.086502Z\",\n        \"hourly_rental_price\": 40,\n        \"location\": \"KSA, Riyadh\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update_vehicle",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM3MTA1LCJpYXQiOjE2NTUyMzM1MDUsImp0aSI6ImQxODIzOWNhNDM2NzQ3MWRiYTk3OGE0ZWZlNDJjYmViIiwidXNlcl9pZCI6MX0.ySz964paKecG8NKf5A2KrBNtDOwwNj79bUqt54S00zM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"vehicle_brand\": \"BMW\",\r\n        \"category\": \"Car\",\r\n        \"hourly_rental_price\": 40,\r\n        \"location\": \"KSA, Riyadh, 123 street\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/update_vehicle/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"update_vehicle",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update_vehicle/vehicle_id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA2MDk1LCJpYXQiOjE2NTUyMDI0OTUsImp0aSI6ImZkOGU4NDQyMDI5ZDQwYzRhZWUxZDBkYWNkOGE5YWVkIiwidXNlcl9pZCI6MX0.BDDjb0_xMpfTftEIoz182rtgbvoT0UQILtteHiAaI7k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"vehicle_brand\":\"VVVV\",\r\n\"category\": \"Car\",\r\n\"year_of_making\": \"2222-12-12\",\r\n\"hourly_rental_price\": 40,\r\n\"location\": \"zzz,zzz\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/update_vehicle/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"update_vehicle",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 10:48:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, PUT"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "188"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your vehicle updated Successfully\",\n    \"vehicle\": {\n        \"vehicle_brand\": \"VVVV\",\n        \"category\": \"Car\",\n        \"year_of_making\": \"2022-06-14T10:20:00.833164Z\",\n        \"hourly_rental_price\": 40,\n        \"location\": \"zzz,zzz\"\n    }\n}"
+				},
+				{
+					"name": "update_vehicle",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM3MTA1LCJpYXQiOjE2NTUyMzM1MDUsImp0aSI6ImQxODIzOWNhNDM2NzQ3MWRiYTk3OGE0ZWZlNDJjYmViIiwidXNlcl9pZCI6MX0.ySz964paKecG8NKf5A2KrBNtDOwwNj79bUqt54S00zM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"vehicle_brand\": \"BMW\",\r\n        \"category\": \"Car\",\r\n        \"hourly_rental_price\": 40,\r\n        \"location\": \"KSA, Riyadh, 123 street\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/update_vehicle/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"update_vehicle",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 19:09:54 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "203"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your vehicle updated Successfully\",\n    \"vehicle\": {\n        \"vehicle_brand\": \"BMW\",\n        \"category\": \"Car\",\n        \"year_of_making\": \"2022-06-14T19:02:37.127521Z\",\n        \"hourly_rental_price\": 40,\n        \"location\": \"KSA, Riyadh, 123 street\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete_vehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA2MDk1LCJpYXQiOjE2NTUyMDI0OTUsImp0aSI6ImZkOGU4NDQyMDI5ZDQwYzRhZWUxZDBkYWNkOGE5YWVkIiwidXNlcl9pZCI6MX0.BDDjb0_xMpfTftEIoz182rtgbvoT0UQILtteHiAaI7k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/delete_vehicle/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"delete_vehicle",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_my_vehicles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjEwOTUzLCJpYXQiOjE2NTUyMDczNTMsImp0aSI6IjhhYzY4MmQ3MGE5NzQ5NWFiODQyNWQ5NDhlZmY4MmYxIiwidXNlcl9pZCI6MX0.fXTkAK0Mb7oti0g5pQWNQ0oezFcZ8UhF3ADDgL5I30I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_my_vehicles/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_my_vehicles",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_my_vehicles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjEwOTUzLCJpYXQiOjE2NTUyMDczNTMsImp0aSI6IjhhYzY4MmQ3MGE5NzQ5NWFiODQyNWQ5NDhlZmY4MmYxIiwidXNlcl9pZCI6MX0.fXTkAK0Mb7oti0g5pQWNQ0oezFcZ8UhF3ADDgL5I30I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_my_vehicles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"list_my_vehicles",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 11:49:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "175"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of All cities\",\n    \"Vehicles\": [\n        {\n            \"vehicle_brand\": \"VVV\",\n            \"category\": \"Car\",\n            \"year_of_making\": \"2022-06-14T10:20:00.833164Z\",\n            \"hourly_rental_price\": 40,\n            \"location\": \"zzz,zzz\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "list_vehicles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA2MDk1LCJpYXQiOjE2NTUyMDI0OTUsImp0aSI6ImZkOGU4NDQyMDI5ZDQwYzRhZWUxZDBkYWNkOGE5YWVkIiwidXNlcl9pZCI6MX0.BDDjb0_xMpfTftEIoz182rtgbvoT0UQILtteHiAaI7k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_vehicles/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_vehicles",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_vehicles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjA2MDk1LCJpYXQiOjE2NTUyMDI0OTUsImp0aSI6ImZkOGU4NDQyMDI5ZDQwYzRhZWUxZDBkYWNkOGE5YWVkIiwidXNlcl9pZCI6MX0.BDDjb0_xMpfTftEIoz182rtgbvoT0UQILtteHiAaI7k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_vehicles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"list_vehicles",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 12:05:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "582"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of All vehicles\",\n    \"cities\": [\n        {\n            \"vehicle_brand\": \"BMW\",\n            \"category\": \"Car\",\n            \"year_of_making\": \"2022-06-14T07:04:27.239215Z\",\n            \"hourly_rental_price\": 20,\n            \"location\": \"KSA, Riyadh\"\n        },\n        {\n            \"vehicle_brand\": \"xxx\",\n            \"category\": \"Car\",\n            \"year_of_making\": \"2022-06-14T08:53:10.867271Z\",\n            \"hourly_rental_price\": 40,\n            \"location\": \"xxx,xxx\"\n        },\n        {\n            \"vehicle_brand\": \"xxx7\",\n            \"category\": \"Car\",\n            \"year_of_making\": \"2022-06-14T09:35:46.244380Z\",\n            \"hourly_rental_price\": 40,\n            \"location\": \"xxx,xxx\"\n        },\n        {\n            \"vehicle_brand\": \"VVV\",\n            \"category\": \"Car\",\n            \"year_of_making\": \"2022-06-14T10:20:00.833164Z\",\n            \"hourly_rental_price\": 40,\n            \"location\": \"zzz,zzz\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "list_reviews_about_user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjI0MTYyLCJpYXQiOjE2NTUyMjA1NjIsImp0aSI6IjFjNmMyYzc4ZTkzNTRkMjE5ZjhiMTY4MjE3NzBiNTgwIiwidXNlcl9pZCI6Mn0.MHxKw_cyKxUjIoRJ7mQw_apNAxyqK-4rHDqxzkvcXfA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_reviews_about_user/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_reviews_about_user",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_reviews_about_user/user_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjI0MTYyLCJpYXQiOjE2NTUyMjA1NjIsImp0aSI6IjFjNmMyYzc4ZTkzNTRkMjE5ZjhiMTY4MjE3NzBiNTgwIiwidXNlcl9pZCI6Mn0.MHxKw_cyKxUjIoRJ7mQw_apNAxyqK-4rHDqxzkvcXfA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_reviews_about_user/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"list_reviews_about_user",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 16:10:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "134"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of All reviews aboutHalaAlqotym\",\n    \"reviews\": [\n        {\n            \"about\": 2,\n            \"rating\": \"90.90\",\n            \"comment\": \"A great car and a great car owner.\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "add_review",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjMyOTQ3LCJpYXQiOjE2NTUyMjkzNDcsImp0aSI6IjQ2NWRlOWU5ZDEzMDRhYjA4ZWM4OGUwNWM1N2I5ZDM0IiwidXNlcl9pZCI6Mn0.GvihBTCeSeuvap8HK7fHIQvbx-RTcrNPSjZTTEhPOlI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"rating\":4.5, \r\n \"comment\" :\"nice\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_review/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"add_review",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add_review/user_id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM5Mzc1LCJpYXQiOjE2NTUyMzU3NzUsImp0aSI6IjhlN2E1MGEwNWRmOTQ4ZTU5MzJjN2M0MDcwOTgzOGNmIiwidXNlcl9pZCI6Mn0.4FkYFFZjh9aqfhBN7fs3NHTqEiNgAajeIDYYxdjjkOw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"rating\":4.80, \r\n \"comment\" :\"good\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_review/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"add_review",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 20:34:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "101"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your review posted Successfully\",\n    \"about\": \"Admin\",\n    \"review\": {\n        \"rating\": \"4.80\",\n        \"comment\": \"good\"\n    }\n}"
+				},
+				{
+					"name": "teast_review_youself",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjM5Mzc1LCJpYXQiOjE2NTUyMzU3NzUsImp0aSI6IjhlN2E1MGEwNWRmOTQ4ZTU5MzJjN2M0MDcwOTgzOGNmIiwidXNlcl9pZCI6Mn0.4FkYFFZjh9aqfhBN7fs3NHTqEiNgAajeIDYYxdjjkOw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"rating\":4.80, \r\n \"comment\" :\"good\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_review/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"add_review",
+								"2"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 20:36:13 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"You can not post a review about your self\"\n}"
+				}
+			]
+		},
+		{
+			"name": "edit_review",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjQ1MDY0LCJpYXQiOjE2NTUyNDE0NjQsImp0aSI6ImU3YTczNmUwNTllZjQxYmJhZjhlMzZiYmVjNGZkYmZjIiwidXNlcl9pZCI6Mn0.W6pq7nTcOD6IIXNEUFi98R1Mf6_05qvSeulyCgop1rU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n\r\n{\r\n\r\n \"rating\":0, \r\n \"comment\" :\"   Bad experience\"\r\n\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/edit_review/37",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"edit_review",
+						"37"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "edit_review/review_id",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjQ1MDY0LCJpYXQiOjE2NTUyNDE0NjQsImp0aSI6ImU3YTczNmUwNTllZjQxYmJhZjhlMzZiYmVjNGZkYmZjIiwidXNlcl9pZCI6Mn0.W6pq7nTcOD6IIXNEUFi98R1Mf6_05qvSeulyCgop1rU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n{\r\n\r\n \"rating\":0, \r\n \"comment\" :\"   Bad experience\"\r\n\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/edit_review/37",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"edit_review",
+								"37"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 21:27:10 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your review edited Successfully\",\n    \"review\": {\n        \"rating\": \"0.00\",\n        \"comment\": \"Bad experience\"\n    }\n}"
+				},
+				{
+					"name": "edit_someone_else_review",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjQ1MDY0LCJpYXQiOjE2NTUyNDE0NjQsImp0aSI6ImU3YTczNmUwNTllZjQxYmJhZjhlMzZiYmVjNGZkYmZjIiwidXNlcl9pZCI6Mn0.W6pq7nTcOD6IIXNEUFi98R1Mf6_05qvSeulyCgop1rU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n{\r\n\r\n \"rating\":5, \r\n \"comment\" :\"Good\"\r\n\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/edit_review/46",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"edit_review",
+								"46"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 21:32:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PATCH, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Only the author can edit/alter the review\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete_review",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjQ1MDY0LCJpYXQiOjE2NTUyNDE0NjQsImp0aSI6ImU3YTczNmUwNTllZjQxYmJhZjhlMzZiYmVjNGZkYmZjIiwidXNlcl9pZCI6Mn0.W6pq7nTcOD6IIXNEUFi98R1Mf6_05qvSeulyCgop1rU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/delete_review/37",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"delete_review",
+						"37"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete_review/review_id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjQ1MDY0LCJpYXQiOjE2NTUyNDE0NjQsImp0aSI6ImU3YTczNmUwNTllZjQxYmJhZjhlMzZiYmVjNGZkYmZjIiwidXNlcl9pZCI6Mn0.W6pq7nTcOD6IIXNEUFi98R1Mf6_05qvSeulyCgop1rU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/delete_review/37",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"delete_review",
+								"37"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 21:44:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, DELETE"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Deleted Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list_my_reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzMwNjIwLCJpYXQiOjE2NTUyNDQyMjAsImp0aSI6ImUzMGUzNmQ2M2I5ZDQzNjQ4ZGFiYjg1YWY4NjJjZTcxIiwidXNlcl9pZCI6Mn0.lsCwc0zY8Ytv0nENaScogxiQtUTHNT0sGPVkY5_2-ag",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_my_reviews/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_my_reviews",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_my_reviews",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzMwNjIwLCJpYXQiOjE2NTUyNDQyMjAsImp0aSI6ImUzMGUzNmQ2M2I5ZDQzNjQ4ZGFiYjg1YWY4NjJjZTcxIiwidXNlcl9pZCI6Mn0.lsCwc0zY8Ytv0nENaScogxiQtUTHNT0sGPVkY5_2-ag",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "list_my_reviews",
+							"host": [
+								"list_my_reviews"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 22:15:44 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of all my reviews\",\n    \"author\": \"Hala Alqotym\",\n    \"reviews\": [\n        {\n            \"rating\": \"4.80\",\n            \"comment\": \"good\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "create_booking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzM0MzIwLCJpYXQiOjE2NTUyNDc5MjAsImp0aSI6IjdkNjI5OGNjZDAyOTQ1YzFhODgxZDdjNDllY2MxM2Q4IiwidXNlcl9pZCI6Mn0.uTgvg9vuSsjMlIGtiZJ-NitLrK0mqf6lG2wMHNMDggI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"False\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"create_booking",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_booking/vehicle_id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzM0MzIwLCJpYXQiOjE2NTUyNDc5MjAsImp0aSI6IjdkNjI5OGNjZDAyOTQ1YzFhODgxZDdjNDllY2MxM2Q4IiwidXNlcl9pZCI6Mn0.uTgvg9vuSsjMlIGtiZJ-NitLrK0mqf6lG2wMHNMDggI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"False\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"create_booking",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 01:56:17 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "240"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your booking request is sent, wait  for the car owner to accept\",\n    \"rentee\": \"Hala Alqotym\",\n    \"booking\": {\n        \"vehicle_delivery\": false,\n        \"start_date\": \"2022-06-15T01:56:17.488800Z\",\n        \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n    },\n    \"total_cost\": \"1100.0\"\n}"
+				}
+			]
+		},
+		{
+			"name": "list_rentee_booking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ0OTA5LCJpYXQiOjE2NTUyNTg1MDksImp0aSI6ImFiMTBjNWYyODlkMDRmZTRhMzNhMmMzZTcwZmRhN2I4IiwidXNlcl9pZCI6Mn0.J5Q2eStz84gqDzyMMo-mR70qPo9qpxVQ_sfOf04tJSg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_rentee_booking/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_rentee_booking",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_rentee_booking",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ0OTA5LCJpYXQiOjE2NTUyNTg1MDksImp0aSI6ImFiMTBjNWYyODlkMDRmZTRhMzNhMmMzZTcwZmRhN2I4IiwidXNlcl9pZCI6Mn0.J5Q2eStz84gqDzyMMo-mR70qPo9qpxVQ_sfOf04tJSg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_rentee_booking/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"list_rentee_booking",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 02:03:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "278"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of All Hala Alqotym bookings\",\n    \"bookings\": [\n        {\n            \"vehicle_delivery\": false,\n            \"start_date\": \"2022-06-15T00:22:41.800308Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        },\n        {\n            \"vehicle_delivery\": false,\n            \"start_date\": \"2022-06-15T01:56:17.488800Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "list_owner_booking",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ1NDQwLCJpYXQiOjE2NTUyNTkwNDAsImp0aSI6IjcwOGYwZDNlODA5NzRkZmM5ZTI2MTNhZTFmMmZhY2E0IiwidXNlcl9pZCI6Mn0.h6Jax5RG6O2TpprlBp3Y88ngHHwxtK1clEPiBIxqCmw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_owner_booking/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"list_owner_booking",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list_owner_booking",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ1NDQwLCJpYXQiOjE2NTUyNTkwNDAsImp0aSI6IjcwOGYwZDNlODA5NzRkZmM5ZTI2MTNhZTFmMmZhY2E0IiwidXNlcl9pZCI6Mn0.h6Jax5RG6O2TpprlBp3Y88ngHHwxtK1clEPiBIxqCmw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/list_owner_booking/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"list_owner_booking",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 02:13:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "55"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of all   booked vehicles\",\n    \"bookings\": \"[]\"\n}"
+				}
+			]
+		}
+	]
+}
