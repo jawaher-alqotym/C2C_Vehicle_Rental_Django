@@ -1010,13 +1010,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MjMyOTQ3LCJpYXQiOjE2NTUyMjkzNDcsImp0aSI6IjQ2NWRlOWU5ZDEzMDRhYjA4ZWM4OGUwNWM1N2I5ZDM0IiwidXNlcl9pZCI6Mn0.GvihBTCeSeuvap8HK7fHIQvbx-RTcrNPSjZTTEhPOlI",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY3NTUyLCJpYXQiOjE2NTUyODExNTIsImp0aSI6ImJiZmNlYzU3MzFiYzQwMWViODE3MDZkNDFjNjg5OGRkIiwidXNlcl9pZCI6Mn0.Vhjvx5gNp7T-3fHC7favrSZ267mSwZX773JiDnHL7O8",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n \"rating\":4.5, \r\n \"comment\" :\"nice\"\r\n\r\n}",
+					"raw": "{\r\n\r\n \"rating\":4, \r\n \"comment\" :\"nice\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1210,6 +1210,91 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"msg\": \"You can not post a review about your self\"\n}"
+				},
+				{
+					"name": "add_review_when_ther_is_no_booking/user_id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY3NTUyLCJpYXQiOjE2NTUyODExNTIsImp0aSI6ImJiZmNlYzU3MzFiYzQwMWViODE3MDZkNDFjNjg5OGRkIiwidXNlcl9pZCI6Mn0.Vhjvx5gNp7T-3fHC7favrSZ267mSwZX773JiDnHL7O8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n \"rating\":4, \r\n \"comment\" :\"nice\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/add_review/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"add_review",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 09:01:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Their is no booking request between you and the user Jawaher_Alqotym\"\n}"
 				}
 			]
 		},
@@ -1634,13 +1719,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzM0MzIwLCJpYXQiOjE2NTUyNDc5MjAsImp0aSI6IjdkNjI5OGNjZDAyOTQ1YzFhODgxZDdjNDllY2MxM2Q4IiwidXNlcl9pZCI6Mn0.uTgvg9vuSsjMlIGtiZJ-NitLrK0mqf6lG2wMHNMDggI",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzYzNjI4LCJpYXQiOjE2NTUyNzcyMjgsImp0aSI6IjM4NDA5NWM4YjE2OTQ4Mzk5MDBhNjhkNjY4NWEwMmJiIiwidXNlcl9pZCI6Mn0.LzRGqjKgZ14Buc65XW2XIyFJPaDF1IgwwGCNJyJEqIg",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"False\"\r\n\r\n}",
+					"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"True\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1648,7 +1733,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/1",
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/7",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -1660,25 +1745,25 @@
 					"path": [
 						"c2c_vehicle_rental_app",
 						"create_booking",
-						"1"
+						"7"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "create_booking/vehicle_id",
+					"name": "create_booking",
 					"originalRequest": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzM0MzIwLCJpYXQiOjE2NTUyNDc5MjAsImp0aSI6IjdkNjI5OGNjZDAyOTQ1YzFhODgxZDdjNDllY2MxM2Q4IiwidXNlcl9pZCI6Mn0.uTgvg9vuSsjMlIGtiZJ-NitLrK0mqf6lG2wMHNMDggI",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzYzNjI4LCJpYXQiOjE2NTUyNzcyMjgsImp0aSI6IjM4NDA5NWM4YjE2OTQ4Mzk5MDBhNjhkNjY4NWEwMmJiIiwidXNlcl9pZCI6Mn0.LzRGqjKgZ14Buc65XW2XIyFJPaDF1IgwwGCNJyJEqIg",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"False\"\r\n\r\n}",
+							"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"True\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1686,19 +1771,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/1",
-							"protocol": "http",
+							"raw": "create_booking/vehicle_id",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"create_booking"
 							],
-							"port": "8000",
 							"path": [
-								"c2c_vehicle_rental_app",
-								"create_booking",
-								"1"
+								"vehicle_id"
 							]
 						}
 					},
@@ -1708,7 +1786,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 15 Jun 2022 01:56:17 GMT"
+							"value": "Wed, 15 Jun 2022 07:14:39 GMT"
 						},
 						{
 							"key": "Server",
@@ -1732,7 +1810,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "240"
+							"value": "239"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -1748,7 +1826,92 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"msg\": \"Your booking request is sent, wait  for the car owner to accept\",\n    \"rentee\": \"Hala Alqotym\",\n    \"booking\": {\n        \"vehicle_delivery\": false,\n        \"start_date\": \"2022-06-15T01:56:17.488800Z\",\n        \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n    },\n    \"total_cost\": \"1100.0\"\n}"
+					"body": "{\n    \"msg\": \"Your booking request is sent, wait  for the car owner to accept\",\n    \"rentee\": \"Hala Alqotym\",\n    \"booking\": {\n        \"vehicle_delivery\": true,\n        \"start_date\": \"2022-06-15T07:14:39.852811Z\",\n        \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n    },\n    \"total_cost\": \"1320.0\"\n}"
+				},
+				{
+					"name": "create_booking",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzYzNjI4LCJpYXQiOjE2NTUyNzcyMjgsImp0aSI6IjM4NDA5NWM4YjE2OTQ4Mzk5MDBhNjhkNjY4NWEwMmJiIiwidXNlcl9pZCI6Mn0.LzRGqjKgZ14Buc65XW2XIyFJPaDF1IgwwGCNJyJEqIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"start_date\":\"2022-06-20T10:00:00.086502Z\",\r\n\"end_date\": \"2022-06-21T13:30:00.086502Z\",\r\n\"vehicle_delivery\": \"True\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/create_booking/7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"create_booking",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 07:24:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "239"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Your booking request is sent, wait  for the car owner to accept\",\n    \"rentee\": \"Hala Alqotym\",\n    \"booking\": {\n        \"vehicle_delivery\": true,\n        \"start_date\": \"2022-06-15T07:24:43.042719Z\",\n        \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n    },\n    \"total_cost\": \"1320.0\"\n}"
 				}
 			]
 		},
@@ -1866,7 +2029,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ1NDQwLCJpYXQiOjE2NTUyNTkwNDAsImp0aSI6IjcwOGYwZDNlODA5NzRkZmM5ZTI2MTNhZTFmMmZhY2E0IiwidXNlcl9pZCI6Mn0.h6Jax5RG6O2TpprlBp3Y88ngHHwxtK1clEPiBIxqCmw",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY0MzY1LCJpYXQiOjE2NTUyNzc5NjUsImp0aSI6ImZlZTA1YTRiNDRlMzQ4YzZhMGEzN2E1MmRiOWMxNTI3IiwidXNlcl9pZCI6MX0.lqiiGis98-A9v_m5ylMOLcFBA91zEJtTY1KYSB4g8Iw",
 						"type": "text"
 					}
 				],
@@ -1895,7 +2058,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzQ1NDQwLCJpYXQiOjE2NTUyNTkwNDAsImp0aSI6IjcwOGYwZDNlODA5NzRkZmM5ZTI2MTNhZTFmMmZhY2E0IiwidXNlcl9pZCI6Mn0.h6Jax5RG6O2TpprlBp3Y88ngHHwxtK1clEPiBIxqCmw",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY0MzY1LCJpYXQiOjE2NTUyNzc5NjUsImp0aSI6ImZlZTA1YTRiNDRlMzQ4YzZhMGEzN2E1MmRiOWMxNTI3IiwidXNlcl9pZCI6MX0.lqiiGis98-A9v_m5ylMOLcFBA91zEJtTY1KYSB4g8Iw",
 								"type": "text"
 							}
 						],
@@ -1922,7 +2085,135 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 15 Jun 2022 02:13:56 GMT"
+							"value": "Wed, 15 Jun 2022 07:26:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "494"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"List of all   booking request\",\n    \"bookings\": [\n        {\n            \"vehicle_delivery\": false,\n            \"start_date\": \"2022-06-15T00:22:41.800308Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        },\n        {\n            \"vehicle_delivery\": false,\n            \"start_date\": \"2022-06-15T01:56:17.488800Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        },\n        {\n            \"vehicle_delivery\": true,\n            \"start_date\": \"2022-06-15T07:14:39.852811Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        },\n        {\n            \"vehicle_delivery\": true,\n            \"start_date\": \"2022-06-15T07:24:43.042719Z\",\n            \"end_date\": \"2022-06-21T13:30:00.086502Z\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "approve_booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY1NTE4LCJpYXQiOjE2NTUyNzkxMTgsImp0aSI6ImY0NjI3YTVhM2JmNTRkMjlhODhjNmZhNjg4MmU1NmQxIiwidXNlcl9pZCI6MX0.1wf6WjhIb_YEsQNUw7fbKbB0WhvzRhCb-o9G_ZzV4nw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/approve_booking/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"c2c_vehicle_rental_app",
+						"approve_booking",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "approve_booking/booking_id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1MzY1NTE4LCJpYXQiOjE2NTUyNzkxMTgsImp0aSI6ImY0NjI3YTVhM2JmNTRkMjlhODhjNmZhNjg4MmU1NmQxIiwidXNlcl9pZCI6MX0.1wf6WjhIb_YEsQNUw7fbKbB0WhvzRhCb-o9G_ZzV4nw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/c2c_vehicle_rental_app/approve_booking/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"c2c_vehicle_rental_app",
+								"approve_booking",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 15 Jun 2022 08:08:49 GMT"
 						},
 						{
 							"key": "Server",
@@ -1946,7 +2237,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "55"
+							"value": "91"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -1962,7 +2253,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"msg\": \"List of all   booked vehicles\",\n    \"bookings\": \"[]\"\n}"
+					"body": "{\n    \"msg\": \"Your booking is approved\",\n    \"booking_approval_status\": \"True\",\n    \"rentee\": \"Hala_Alqotym\"\n}"
 				}
 			]
 		}
