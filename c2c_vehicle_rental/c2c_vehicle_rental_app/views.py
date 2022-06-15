@@ -292,7 +292,7 @@ def list_my_reviews(request : Request):
         return Response({f"{e}"})
 
 
-# Booking ,creat(rentee only) read(both) delet(both) accsept(update only the owner can)
+# Booking
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
 def create_booking(request : Request, vehicle_id):
@@ -331,32 +331,53 @@ def list_owner_booking(request : Request):
     :return: dataResponse
     '''
     if request.user.is_authenticated:
-     user = User.objects.get(id=request.user.id)
+     user = User.objects.get(id=1)
      user_credential = UserCredential.objects.get(user=user)
 
      #get the owner from their vehicle, Note: not an efficient way to do so but it will do for now
      owner_vehicles = Vehicle.objects.filter(owner=user_credential)
+     print(owner_vehicles)
      bookings = Booking.objects.all()
 
      list_of_received_req =[]
-     for item1,item2 in owner_vehicles,bookings:
-         if item1 in bookings:
-             list_of_received_req.append(item2)
+     for item in owner_vehicles:
+         if item in bookings:
+             list_of_received_req.append(item)
+     print(list_of_received_req)
+
 
      dataResponse = {
-        "msg" : "List of All bookings",
-        "bookings" : VehicleSerializer(instance=bookings, many=True).data
+        "msg" : f"List of all {user.first_name} {user.last_name} booked vehicles",
+        "bookings" : f"{list_of_received_req}"
      }
      return Response(dataResponse)
     else:
-        dataResponse = {"msg": "couldn't get this user vehicle"}
+        dataResponse = {"msg": "couldn't get this user bookings"}
         return Response(dataResponse, status=status.HTTP_401_UNAUTHORIZED)
 
 
 @api_view(['GET'])
 @authentication_classes([JWTAuthentication])
-def list_rentee_booking():
-    pass
+def list_rentee_booking(request : Request):
+    '''
+    this method list all booking request made.
+    :param: request
+    :return: dataResponse
+    '''
+    if request.user.is_authenticated:
+        user = User.objects.get(id=request.user.id)
+        user_credential = UserCredential.objects.get(user=user)
+
+        rentee_booking = Booking.objects.filter(rentee=user_credential)
+        dataResponse = {
+        "msg": f"List of All {user.first_name} {user.last_name} bookings",
+        "bookings": BookingSerializer(instance=rentee_booking , many=True).data
+        }
+        return Response(dataResponse)
+    else:
+        dataResponse = {"msg": "couldn't get this user bookings"}
+        return Response(dataResponse, status=status.HTTP_401_UNAUTHORIZED)
+
 
 @api_view(['GET'])
 @authentication_classes([JWTAuthentication])
@@ -366,6 +387,16 @@ def list_rentee_old_booking():
 @api_view(['GET'])
 @authentication_classes([JWTAuthentication])
 def list_owner_old_booking():
+    pass
+
+@api_view(['DELETE'])
+@authentication_classes([JWTAuthentication])
+def delete_booking():
+    pass
+
+@api_view(['PATCH'])
+@authentication_classes([JWTAuthentication])
+def approve_booking():
     pass
 
 def update_user_rating_Avg(rating: str, user)->None:
