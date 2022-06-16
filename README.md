@@ -34,17 +34,17 @@ The project helps reduce vehicle renting costs and gas costs for users(the perso
 ### Vehicle Owner
 #### Role: offer their car for rent.
 - Create, Read, Update, Delete Vehicle.
-- Create, Read, Update, and Delete reviews they wrote about the people who rented their vehicle.
-- Read, and delete a rent request.
-- Register.
+- Create, Read, Update, and Delete reviews about the people who rented their vehicle.
+- Read, and accept rent requests.
+- Register/login.
 
 
 ### Vehicle Rentee
 #### Role: view and rent cars.
 - View cars for rent.
-- Create, Read, and delete a rent request.
-- Create, Read, Update, and Delete reviews they wrote about the vehicle owner/ the vehicle.
-- Register.
+- Create, Read, and delete a rent request they made.
+- Create, Read, Update, and Delete reviews about the vehicle owner/vehicle they rented.
+- Register/login.
 
 ### Admin
 #### Role: grant and revoke permissions.
