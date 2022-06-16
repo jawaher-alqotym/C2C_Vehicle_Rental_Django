@@ -1,5 +1,4 @@
 # C2C_Vehicle_Rental_Django
-<img src="https://user-images.githubusercontent.com/63616896/173996973-93c2d583-389e-482a-a423-2783f8b8f243.png" width="50%" hight="50%"/>
 
 [Idea](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/blob/main/README.md#idea "Idea")
 
@@ -14,6 +13,7 @@
 [Project Link](https://github.com/jawaher-alqotym/C2C_Vehicle_Rental_Django/edit/main/README.md#project-link "project link")
 
 ## Idea:
+<img src="https://user-images.githubusercontent.com/63616896/173996973-93c2d583-389e-482a-a423-2783f8b8f243.png" width="50%" hight="50%"/>
 A platform to facilitate renting cars for both vehicle owners and vehicle rentee. The system will help users find a vehicle to rent directly from the vehicle owner without a “middle-man” and allow anyone with a vehicle to further benefit from it and generate an additional income by putting it up for rent.
 
 ## Inspiration:
