@@ -22,7 +22,7 @@ A platform to facilitate renting cars for both vehicle owners and vehicle rentee
 - <b>Reducing vehicle renting costs. </b>
 - <b>Help vehicle owners generate additional income by putting their cars for rent.</b>
 
-## Project Impact and challenges:
+## C2C Vehicle Reantl Impact and challenges:
 The project helps reduce vehicle renting costs and gas costs for users(the person who rents the vehicle will pay for the gas). Although the idea is promising it has some weaknesses like authenticating the vehicle owner and vehicle rentee. Not many people would be happy to see strangers drive their vehicle without being sure of their identity and people are reluctant to pay without a guarantee of the existence of that vehicle. However, we can get around these weaknesses by requiring both parties to register an account to establish some credentials and provide a personal page for both with reviews.
 
 ## List of Services / Features:
