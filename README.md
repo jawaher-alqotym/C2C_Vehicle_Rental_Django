@@ -17,8 +17,8 @@
 A platform to facilitate renting cars for both vehicle owners and vehicle rentee. The system will help users find a vehicle to rent directly from the vehicle owner without a “middle-man” and allow anyone with a vehicle to further benefit from it and generate an additional income by putting it up for rent.
 
 ## Inspiration:
-Facilitate the renting process while reducing vehicle renting costs. Also, the C2C vehicle rental business model is not represented enough(if at all) in KSA.
 
+- <b>Facilitate the renting process.</b>
 - <b>Reducing vehicle renting costs. </b>
 - <b>Help vehicle owners generate additional income by putting their cars for rent.</b>
 
